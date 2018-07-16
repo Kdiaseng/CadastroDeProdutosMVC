@@ -1,27 +1,27 @@
 ﻿@model IEnumerable<CadastroProdutosMVC.Models.Produto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lista de Produtos";
 }
 
-<h2>Index</h2>
+<h2>Cadastro de Produtos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Cadastrar Novo Produto", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NomeProduto)
+            Nome
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DescricaoProduto)
+            Descrição do Produto
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ValorUniProduto)
+           Valor Unitário
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.QuantidadeProduto)
+           Quantidade do Produto
         </th>
         <th></th>
     </tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.QuantidadeProduto)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDproduto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IDproduto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDproduto })
+            @Html.ActionLink("Editar", "Edit", new { id=item.IDproduto }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.IDproduto }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.IDproduto })
         </td>
     </tr>
 }

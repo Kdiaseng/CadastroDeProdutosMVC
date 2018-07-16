@@ -1,10 +1,10 @@
 ﻿@model CadastroProdutosMVC.Models.Produto
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Cadastro";
 }
 
-<h2>Create</h2>
+<h2>Cadastrar novo Produto</h2>
 
 
 @using (Html.BeginForm()) 
@@ -16,7 +16,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.IDproduto, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Código do Produto", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.IDproduto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.IDproduto, "", new { @class = "text-danger" })
@@ -24,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NomeProduto, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Nome", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NomeProduto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NomeProduto, "", new { @class = "text-danger" })
@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DescricaoProduto, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Descrição", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DescricaoProduto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DescricaoProduto, "", new { @class = "text-danger" })
@@ -40,7 +40,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ValorUniProduto, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Valor Unitário", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ValorUniProduto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ValorUniProduto, "", new { @class = "text-danger" })
@@ -48,7 +48,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.QuantidadeProduto, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Quantidade", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.QuantidadeProduto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.QuantidadeProduto, "", new { @class = "text-danger" })
@@ -57,14 +57,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar para Lista", "Index")
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
