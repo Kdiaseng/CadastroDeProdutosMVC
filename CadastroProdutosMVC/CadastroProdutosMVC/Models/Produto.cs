@@ -10,10 +10,13 @@ namespace CadastroProdutosMVC.Models
         [Required]                              //Será obrigatorio o cadastro do nome do produto
         public string NomeProduto { get; set; }
 
-        public string descricaoProduto { get; set; }
+        public string DescricaoProduto { get; set; }
 
         [Required]
-        public double valorUniProduto { get; set; }
-        
+        public double ValorUniProduto { get; set; }
+
+        [Required]
+        public int QuantidadeProduto { get; set; }
+
     }
 }
